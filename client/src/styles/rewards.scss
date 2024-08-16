@@ -1,0 +1,72 @@
+.rewards-title {
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-shadow: 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.4);
+    margin-top: 15vw;
+    margin-bottom: 1.5vw;
+}
+
+.rewards-subtitle {
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-shadow: 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.4);
+    margin-top: -1vw;
+    margin-bottom: 1vw;
+}
+
+.rewards-container {
+    display: flex;
+    height: 100%;
+    position: relative;
+    top: 1.5vw;
+    gap: 1vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.reward-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #257079;
+    width: 50vw;
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    box-shadow: inset 0 -0.2vw rgba(0, 0, 0, 0.2);
+
+    .reward-image {
+        max-width: 4vw;
+    }
+
+    .reward-name {
+        position: absolute;
+        font-size: 2vw;
+        margin-left: 4.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .reward-guide {
+        position: absolute;
+        font-size: 1vw;
+        word-wrap: anywhere;
+        width: 21vw;
+        margin-left: 4.5vw;
+        margin-top: 1vw;
+    }
+
+    .reward-status {
+        position: absolute;
+        border-radius: 0.5vw;
+        max-width: 4vw;
+        margin-left: 45.8vw;
+    }
+}

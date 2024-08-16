@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tropical Triumph</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+        
+        body {
+            background: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            gap: 10px;
+        }
+
+        input {
+            background: black;
+            color: white;
+            border: 0.2vw solid white;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 20px;
+            width: 300px;
+            text-align: center;
+            outline: none;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        input:focus {
+            border-color: rgb(4, 126, 0);
+            background: rgb(2, 56, 0);
+        }
+
+        input::placeholder {
+            color: white;
+            opacity: 0.5;
+        }
+
+        button {
+            background: transparent;
+            color: white;
+            outline: 0.2vw solid white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: inline-flex;
+            min-width: 150px;
+            min-height: 0px;
+            border-radius: 5px;
+            background: rgb(4, 126, 0);
+            z-index: -1;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        button:hover::before {
+            display: inline-flex;
+            min-width: 150px;
+            min-height: 40px;
+            background: rgb(4, 126, 0);
+        }
+
+        @keyframes button-in {
+            0% {
+                min-width: 0;
+            }
+            100% {
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="password" placeholder="Access Code">
+    <button>Verify</button>
+
+    <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", () => {
+            fetch("/api/verify", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    code: input.value
+                })
+            }).then(res => res.json()).then(data => {
+                if (data.error) return alert(data.reason);
+                location.reload();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+$primary-color: #3db8c7;
+$secondary-color: #33a291;
+$text-color: #ffffff;
+$easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+$easeOutBack: cubic-bezier(0.34, 1.56, 0.64, 1);
+$easeInQuint: cubic-bezier(0.64, 0, 0.78, 0);
+
+.logo {
+    width: 50vw;
+    position: relative;
+    bottom: 2vw;
+    animation: blobby 1.5s $easeInOutSine 0.3s infinite alternate;
+    @keyframes blobby {
+      from {
+        transform: rotate(0.5deg) scale(1);
+      }
+      to {
+        transform: rotate(-0.5deg) scale(0.98);
+      }
+    }
+}
+
+.creditsText {
+  position: absolute;
+  left: 0;
+  bottom: 0.75vw;
+  text-align: center;
+  margin: 0;
+  font-size: 1.5vw;
+  text-align: center;
+  width: 100%;
+}

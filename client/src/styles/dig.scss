@@ -1,0 +1,71 @@
+.shell-count-container {
+    position: absolute;
+    background-color: #3db8c7;
+    width: fit-content;
+    height: 3vw;
+    top: 3vw;
+    z-index: 101;
+    right: 0vw;
+    border-radius: 0 0 0 1vw;
+    padding: 0 0 0 0.5vw;
+
+    .shell-count-inside {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        .shell-count-icon {
+            width: 2.5vw;
+            margin-right: 0.25vw;
+            margin-top: 0.2vw;
+        }
+
+        .shell-count-text {
+            text-shadow: 0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.4);
+            font-size: 1.25vw;
+            margin-right: 0.5vw;
+        }
+    }
+}
+
+.shovel {
+    width: 6vw;
+    position: fixed;
+    pointer-events: none;
+    transform: scaleX(-1) scaleY(-1);
+    z-index: 1;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.1s ease;
+    animation: digging 0.5s ease-in-out infinite;
+
+    @keyframes digging {
+        0% {
+            transform: scaleX(-1) scaleY(-1) rotate(0deg);
+        }
+
+        50% {
+            transform: scaleX(-1) scaleY(-1) rotate(10deg);
+        }
+
+        100% {
+            transform: scaleX(-1) scaleY(-1) rotate(0deg);
+        }
+    }
+}
+
+.sandbox {
+    width: 90vw;
+    height: 45vw;
+    background-image: url('../../public/content/sandbox-sand.png');
+    background-size: 10vw;
+    border-radius: 5vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -0.5vw inset;
+    position: relative;
+    top: 1.6vw;
+    user-select: none;
+}

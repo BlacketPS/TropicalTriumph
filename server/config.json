@@ -1,0 +1,80 @@
+{
+    "port": 3001,
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "@L=+FQd76CZ82Eu8p-@Ra67#6_3X^kTM_DR5$vV&B=Y%?WFF743!!nxB4@cJYEww"
+    },
+    "databases": [
+        "blacket_dev",
+        "event_tt"
+    ],
+    "users": {
+        "defaults": {
+            "shells": 0,
+            "shovel": 0,
+            "treasures": {
+                "Fossils": { 
+                    "Sea Shell Fossil": 0,
+                    "Coral Fossil": 0,
+                    "Crinoid Fossil": 0,
+                    "Shark Tooth": 0,
+                    "Ammonite Fossil": 0,
+                    "Dinosaur Bone Fragment": 0,
+                    "Trilobite Fossil": 0
+                },
+                "Glass": {
+                    "White Sea Glass": 0,
+                    "Green Sea Glass": 0,
+                    "Brown Sea Glass": 0,
+                    "Blue Sea Glass": 0,
+                    "Amber Sea Glass": 0,
+                    "Red Sea Glass": 0,
+                    "Black Sea Glass": 0
+                },
+                "Marine": {
+                    "Seaweed": 0,
+                    "Sea Urchin Skeleton": 0,
+                    "Hermit Crab Shell": 0,
+                    "Sea Anemone": 0,
+                    "Sea Sponge": 0,
+                    "Starfish": 0,
+                    "Seahorse": 0
+                },
+                "Minerals": {
+                    "Pebble": 0,
+                    "Sandstone": 0,
+                    "Agate": 0,
+                    "Jasper": 0,
+                    "Ammonite": 0,
+                    "Geode": 0,
+                    "Moonstone": 0
+                },
+                "Treasures": {
+                    "Broken Glass": 0,
+                    "Rusty Nails": 0,
+                    "Old Coins": 0,
+                    "Glass Bottle": 0,
+                    "Pearl Necklace": 0,
+                    "Gold Doubloon": 0,
+                    "Jeweled Crown": 0
+                }
+            },
+            "miscellaneous": {
+                "treasures": 0,
+                "history": []
+            }
+        }
+    },
+    "blacklisted": [
+        3324853,
+        8029217,
+        7057190,
+        4008231,
+        6335947,
+        5975189,
+        9969322,
+        2136329,
+        3841732
+    ]
+}
